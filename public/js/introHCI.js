@@ -1,6 +1,6 @@
 'use strict';
 
-const e = require("express");
+// const e = require("express");
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
@@ -15,8 +15,8 @@ function initializePage() {
 	$(".likeBtn").click(clickLikeBtn);
 }
 
-function clickLikeBtn() {
+function clickLikeBtn(e) {
 	e.preventDefault();
 	ga('create', 'UA-189970929-1', 'auto');
-	ga("send", "event", 'like', 'click');
+	ga('send', 'event', 'like', 'click');
 }
